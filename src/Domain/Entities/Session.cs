@@ -1,17 +1,19 @@
-using Domain.ValueObjects;
-
 namespace Domain.Entities;
 
 public class Session : BaseEntity
 {
-    public Session(int movieId, int hallId, ShowTime showTime)
+    public Session(int movieId, DateOnly date, DateTime startsAt, DateTime endsAt)
     {
         MovieId = movieId;
-        HallId = hallId;
-        ShowTime = showTime;
+        Date = date;
+        StartsAt = startsAt;
+        EndsAt = endsAt;
     }
 
-    public ShowTime ShowTime { get; private set; }
+    public DateOnly Date { get; private set; }
+    public DateTime StartsAt { get; private set; }
+    public DateTime EndsAt { get; private set; }
+
     public int MovieId { get; private set; }
-    public int HallId { get; private set; }
+    public int ScheduleId { get; }
 }

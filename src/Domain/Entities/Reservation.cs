@@ -1,6 +1,6 @@
 namespace Domain.Entities;
 
-public class Reservation : BaseEntity
+public class Reservation : BaseEntity, IAggregateRoot
 {
     public Reservation(int orderId, int sessionId, int seatId)
     {

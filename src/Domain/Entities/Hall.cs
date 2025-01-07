@@ -1,6 +1,6 @@
 namespace Domain.Entities;
 
-public class Hall : BaseEntity
+public class Hall : BaseEntity, IAggregateRoot
 {
-    public string Type { get; set; }
+    public HallType Type { get; set; }
 }

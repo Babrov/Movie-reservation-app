@@ -2,9 +2,8 @@ namespace Domain.Entities;
 
 public class Payment : BaseEntity
 {
-    public Payment(int orderId, string method, decimal amount)
+    public Payment(PaymentMethod method, decimal amount)
     {
-        OrderId = orderId;
         Method = method;
         Amount = amount;
     }
@@ -13,8 +12,9 @@ public class Payment : BaseEntity
     {
     }
 
-    public string Method { get; private set; }
+    public PaymentMethod Method { get; private set; }
     public decimal Amount { get; private set; }
+    public PaymentStatus Status { get; set; }
 
-    public int OrderId { get; private set; }
+    public int OrderId { get; }
 }

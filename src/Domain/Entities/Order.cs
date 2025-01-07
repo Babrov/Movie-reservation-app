@@ -1,6 +1,6 @@
 namespace Domain.Entities;
 
-public class Order : BaseEntity
+public class Order : BaseEntity, IAggregateRoot
 {
     public Order(int userId)
     {
@@ -11,14 +11,23 @@ public class Order : BaseEntity
     {
     }
 
-    public string Status { get; private set; }
+    public OrderStatus Status { get; } = OrderStatus.Placed;
     public int UserId { get; init; }
 
-    public Payment? Payment { get; }
+    public Payment? Payment { get; private set; }
     public int? PaymentId { get; init; }
 
-    public void ChangeStatus()
+    public void Cancel()
     {
-        Status = "";
+    }
+
+    public void Confirm()
+    {
+        if (Status == OrderStatus.Cancelled) throw new ArgumentException("Order is Cancelled");
+    }
+
+    public void AddPayment(Payment payment)
+    {
+        Payment = payment;
     }
 }

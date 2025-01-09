@@ -1,6 +1,6 @@
 namespace Domain.Enums;
 
-public enum SeatCategory
+public enum SeatType
 {
     Classic = 1,
     Comfort = 2,

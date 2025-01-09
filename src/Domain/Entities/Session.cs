@@ -1,6 +1,6 @@
 namespace Domain.Entities;
 
-public class Session : BaseEntity
+public class Session : BaseEntity, IAggregateRoot
 {
     public Session(int movieId, DateOnly date, DateTime startsAt, DateTime endsAt)
     {
@@ -13,7 +13,8 @@ public class Session : BaseEntity
     public DateOnly Date { get; private set; }
     public DateTime StartsAt { get; private set; }
     public DateTime EndsAt { get; private set; }
+    public decimal Price { get; set; }
 
     public int MovieId { get; private set; }
-    public int ScheduleId { get; }
+    public int HallId { get; }
 }

@@ -2,12 +2,12 @@ namespace Domain.Entities;
 
 public class Seat : BaseEntity
 {
-    public Seat(int hallId, Row row, int number, SeatCategory category)
+    public Seat(int hallId, Row row, int number, SeatType type)
     {
         HallId = hallId;
         Row = row;
         Number = number;
-        Category = category;
+        Type = type;
     }
 
     private Seat()
@@ -16,7 +16,7 @@ public class Seat : BaseEntity
 
     public Row Row { get; private set; }
     public int Number { get; private set; }
-    public SeatCategory Category { get; private set; }
+    public SeatType Type { get; private set; }
 
     public int HallId { get; private set; }
 }

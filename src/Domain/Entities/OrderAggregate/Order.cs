@@ -14,20 +14,6 @@ public class Order : BaseEntity, IAggregateRoot
     public OrderStatus Status { get; } = OrderStatus.Placed;
     public int UserId { get; init; }
 
-    public Payment? Payment { get; private set; }
+    public Payment? Payment { get; }
     public int? PaymentId { get; init; }
-
-    public void Cancel()
-    {
-    }
-
-    public void Confirm()
-    {
-        if (Status == OrderStatus.Cancelled) throw new ArgumentException("Order is Cancelled");
-    }
-
-    public void AddPayment(Payment payment)
-    {
-        Payment = payment;
-    }
 }

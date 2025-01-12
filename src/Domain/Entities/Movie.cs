@@ -11,8 +11,18 @@ public class Movie : BaseEntity, IAggregateRoot
     }
 
     public string Title { get; private set; }
-    public Genre Genre { get; set; }
-    public TimeSpan Duration { get; set; }
+    public Genre Genre { get; private set; }
+    public TimeSpan Duration { get; private set; }
     public string Description { get; set; } = string.Empty;
-    public DateTimeOffset? PublishedAt { get; set; }
+    public DateTimeOffset? PublishedAt { get; private set; }
+
+    public void Publish()
+    {
+        PublishedAt = DateTimeOffset.Now;
+    }
+
+    public void Unpublish()
+    {
+        PublishedAt = null;
+    }
 }

@@ -10,4 +10,7 @@ public class PricingRule : BaseEntity, IAggregateRoot
 
     public SeatType SeatType { get; private set; }
     public decimal Price { get; private set; }
+
+    // TODO: Later
+    // public HallType HallType { get; set; }
 }

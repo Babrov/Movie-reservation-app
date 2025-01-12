@@ -2,5 +2,10 @@ namespace Domain.Entities;
 
 public class Hall : BaseEntity, IAggregateRoot
 {
-    public HallType Type { get; set; }
+    public Hall(HallType type)
+    {
+        Type = type;
+    }
+
+    public HallType Type { get; private set; }
 }

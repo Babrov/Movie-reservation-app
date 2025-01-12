@@ -1,15 +1,22 @@
 namespace Domain.Entities;
 
-public class User : BaseEntity
+public class User : BaseEntity, IAggregateRoot
 {
+    public User(string email, string passwordHash, string firstName, string lastName)
+    {
+        Email = email;
+        PasswordHash = passwordHash;
+        FirstName = firstName;
+        LastName = lastName;
+    }
+
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
     public string PasswordHash { get; private set; }
-    public string PasswordSalt { get; init; }
     public string Email { get; set; }
 
-    public bool IsAdmin { get; set; }
+    public bool IsAdmin { get; set; } = false;
 
     public void ChangePassword(string newPasswordHash)
     {

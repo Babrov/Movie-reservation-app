@@ -14,4 +14,6 @@ public class SessionSeat : BaseEntity, IAggregateRoot
 
     public int SessionId { get; private set; }
     public int SeatId { get; private set; }
+
+    public bool IsReserved { get; }
 }

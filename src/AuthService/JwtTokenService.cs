@@ -12,21 +12,21 @@ public class JwtTokenService
 
     public JwtTokenService(IConfiguration configuration)
     {
-        _key = configuration["Jwt:Key"] ?? "super_secret_key_123!";
+        _key = configuration["Jwt:Key"] ?? "ThisIsASecretKeyForJwtTokenGeneration";
         _issuer = configuration["Jwt:Issuer"] ?? "MovieReservationApp";
     }
 
     public string GenerateToken(string email)
     {
-        Claim[] claims = new[]
+        Claim[] claims =
         {
             new Claim(JwtRegisteredClaimNames.Email, email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
-        SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_key));
-        SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-        JwtSecurityToken token = new JwtSecurityToken(
+        SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(_key));
+        SigningCredentials creds = new(key, SecurityAlgorithms.HmacSha256);
+        JwtSecurityToken token = new(
             _issuer,
             null,
             claims,

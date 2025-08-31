@@ -1,3 +1,6 @@
+using Domain.Entities;
+using Shared.Infrastructure;
+
 namespace Infrastructure.Data.Configurations;
 
 public class TicketConfiguration : BaseEntityConfiguration<Ticket>

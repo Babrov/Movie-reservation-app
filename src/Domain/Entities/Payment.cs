@@ -1,3 +1,5 @@
+using Shared;
+
 namespace Domain.Entities;
 
 public class Payment : BaseEntity

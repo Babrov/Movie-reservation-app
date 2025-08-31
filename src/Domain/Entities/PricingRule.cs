@@ -1,3 +1,6 @@
+using Shared;
+using Venues.Domain;
+
 namespace Domain.Entities;
 
 public class PricingRule : BaseEntity, IAggregateRoot

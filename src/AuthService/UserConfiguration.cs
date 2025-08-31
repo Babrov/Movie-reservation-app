@@ -1,4 +1,8 @@
-namespace Infrastructure.Data.Configurations;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Shared.Infrastructure;
+
+namespace AuthService;
 
 public class UserConfiguration : BaseEntityConfiguration<User>
 {
@@ -7,17 +11,24 @@ public class UserConfiguration : BaseEntityConfiguration<User>
         base.Configure(builder);
 
         builder.Property(e => e.Email)
+            .HasMaxLength(255)
             .IsRequired();
 
         builder.Property(e => e.FirstName)
+            .HasMaxLength(255)
             .IsRequired();
 
         builder.Property(e => e.LastName)
+            .HasMaxLength(255)
             .IsRequired();
 
         builder.Property(e => e.PasswordHash)
             .IsRequired();
 
-        builder.HasIndex(e => e.Email);
+        builder.Property(e => e.IsAdmin).HasDefaultValue(false);
+        builder.Property(e => e.IsActive).HasDefaultValue(true);
+
+
+        builder.HasIndex(e => e.Email).IsUnique();
     }
 }

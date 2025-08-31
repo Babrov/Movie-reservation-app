@@ -1,4 +1,6 @@
-namespace Domain.Entities;
+using Shared;
+
+namespace AuthService;
 
 public class User : BaseEntity, IAggregateRoot
 {
@@ -10,13 +12,18 @@ public class User : BaseEntity, IAggregateRoot
         LastName = lastName;
     }
 
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    private User()
+    {
+    }
+
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
 
     public string PasswordHash { get; private set; }
     public string Email { get; set; }
 
     public bool IsAdmin { get; set; } = false;
+    public bool IsActive { get; set; } = true;
 
     public void ChangePassword(string newPasswordHash)
     {

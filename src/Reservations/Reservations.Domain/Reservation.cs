@@ -1,4 +1,3 @@
-using MoviesCatalog.Domain;
 using Shared;
 
 namespace Reservations.Domain;

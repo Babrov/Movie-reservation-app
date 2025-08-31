@@ -7,11 +7,9 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer"/>
     </ItemGroup>
+
     <ItemGroup>
-        <ProjectReference Include="..\ApplicationCore\ApplicationCore.csproj"/>
-        <ProjectReference Include="..\Application\Application.csproj"/>
-    </ItemGroup>
-    <ItemGroup>
-        <Folder Include="Data\Migrations\"/>
+        <ProjectReference Include="..\Domain\Domain.csproj"/>
+        <ProjectReference Include="..\Shared\Shared.Infrastructure\Shared.Infrastructure.csproj"/>
     </ItemGroup>
 </Project>

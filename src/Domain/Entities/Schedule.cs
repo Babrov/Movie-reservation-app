@@ -1,3 +1,5 @@
+using Shared;
+
 namespace Domain.Entities;
 
 //TODO: Not sure if needed rn

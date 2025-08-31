@@ -1,3 +1,6 @@
+using Domain.Entities;
+using Shared.Infrastructure;
+
 namespace Infrastructure.Data.Configurations;
 
 public class SessionConfiguration : BaseEntityConfiguration<Session>
@@ -23,12 +26,6 @@ public class SessionConfiguration : BaseEntityConfiguration<Session>
 
         builder.HasIndex(e => e.Date);
         builder.HasIndex(e => new { e.MovieId, e.HallId });
-
-        builder.HasOne<Movie>()
-            .WithMany()
-            .HasForeignKey(e => e.MovieId)
-            .IsRequired()
-            .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne<Hall>()
             .WithMany()

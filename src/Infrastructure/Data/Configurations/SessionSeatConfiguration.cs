@@ -1,3 +1,7 @@
+using Domain.Entities;
+using Shared.Infrastructure;
+using Venues.Domain;
+
 namespace Infrastructure.Data.Configurations;
 
 public class SessionSeatConfiguration : BaseEntityConfiguration<SessionSeat>

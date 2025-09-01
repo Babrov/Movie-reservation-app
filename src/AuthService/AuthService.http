@@ -1,6 +1,9 @@
 @AuthService_HostAddress = http://localhost:5210
+@AuthService_AccessToken = 
+ 
 
-GET {{AuthService_HostAddress}}/weatherforecast/
+GET {{AuthService_HostAddress}}/api/Auth/me/
 Accept: application/json
+Authorization: Bearer {{AuthService_AccessToken}}
 
 ###

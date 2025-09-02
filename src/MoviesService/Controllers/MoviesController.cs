@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MoviesService.Data;
 
 namespace MoviesService.Controllers;
 

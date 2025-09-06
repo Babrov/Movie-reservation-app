@@ -4,10 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.Infrastructure", "src\MoviesCatalog\MoviesCatalog.Infrastructure\MoviesCatalog.Infrastructure.csproj", "{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.API", "src\Reservations\Reservations.API\Reservations.API.csproj", "{549C0BC7-575F-4701-83B0-AEC903CAE540}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.Domain", "src\Reservations\Reservations.Domain\Reservations.Domain.csproj", "{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.Infrastructure", "src\Reservations\Reservations.Infrastructure\Reservations.Infrastructure.csproj", "{CC2355D1-CF97-46B7-86CB-16FAF8D754CD}"
@@ -38,14 +34,6 @@ Global
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Release|Any CPU.ActiveCfg = Release|Any CPU

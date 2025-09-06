@@ -9,5 +9,5 @@ public class Genre : BaseEntity
         Name = name;
     }
 
-    public string Name { get; init; }
+    public required string Name { get; init; }
 }

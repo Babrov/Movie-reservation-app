@@ -2,6 +2,6 @@ namespace MoviesService.Entities;
 
 public class MovieGenre
 {
-    public int MovieId { get; set; }
-    public int GenreId { get; set; }
+    public required int MovieId { get; set; }
+    public required int GenreId { get; set; }
 }

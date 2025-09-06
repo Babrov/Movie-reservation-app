@@ -18,6 +18,6 @@ public class MovieConfiguration : BaseEntityConfiguration<Movie>
         builder.Property(e => e.RuntimeMinutes).IsRequired();
 
         builder.HasIndex(e => e.Title).IsUnique();
-        builder.HasIndex(e => e.Slug).IsUnique();
+        builder.HasIndex(e => e.Slug).IsUnique().HasFilter("[Slug] <> ''");
     }
 }

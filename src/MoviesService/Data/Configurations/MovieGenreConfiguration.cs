@@ -8,6 +8,6 @@ public class MovieGenreConfiguration : IEntityTypeConfiguration<MovieGenre>
 {
     public void Configure(EntityTypeBuilder<MovieGenre> builder)
     {
-        builder.HasIndex(e => new { e.MovieId, e.GenreId }).IsUnique();
+        builder.HasKey(e => new { e.MovieId, e.GenreId });
     }
 }

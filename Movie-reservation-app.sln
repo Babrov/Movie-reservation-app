@@ -4,14 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.Domain", "src\MoviesCatalog\MoviesCatalog.Domain\MoviesCatalog.Domain.csproj", "{91FC3B4C-49D0-44C0-8E69-74D68D7AFE5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.Infrastructure", "src\MoviesCatalog\MoviesCatalog.Infrastructure\MoviesCatalog.Infrastructure.csproj", "{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.API", "src\MoviesCatalog\MoviesCatalog.API\MoviesCatalog.API.csproj", "{17227AE9-AEB1-4773-A30F-0E61C8DD4D60}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.API", "src\Reservations\Reservations.API\Reservations.API.csproj", "{549C0BC7-575F-4701-83B0-AEC903CAE540}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.Domain", "src\Reservations\Reservations.Domain\Reservations.Domain.csproj", "{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reservations.Infrastructure", "src\Reservations\Reservations.Infrastructure\Reservations.Infrastructure.csproj", "{CC2355D1-CF97-46B7-86CB-16FAF8D754CD}"
@@ -25,6 +17,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Domain", "src\Shared\Shared.Domain\Shared.Domain.csproj", "{7A8D24A5-75AD-4DD0-A83D-8B9E38435EFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "src\AuthService\AuthService.csproj", "{E6A56154-8058-466F-8E75-03F950D5D33C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesService", "src\MoviesService\MoviesService.csproj", "{BEFA1212-FAA4-4A3E-B9E2-B33FA14BE79A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,22 +34,6 @@ Global
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D665CBD7-7AE1-4C82-A90C-41BBFC4F694B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91FC3B4C-49D0-44C0-8E69-74D68D7AFE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91FC3B4C-49D0-44C0-8E69-74D68D7AFE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91FC3B4C-49D0-44C0-8E69-74D68D7AFE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91FC3B4C-49D0-44C0-8E69-74D68D7AFE5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D5BB497-B8D4-450A-B36B-C9E1D65BF6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17227AE9-AEB1-4773-A30F-0E61C8DD4D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17227AE9-AEB1-4773-A30F-0E61C8DD4D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17227AE9-AEB1-4773-A30F-0E61C8DD4D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17227AE9-AEB1-4773-A30F-0E61C8DD4D60}.Release|Any CPU.Build.0 = Release|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{549C0BC7-575F-4701-83B0-AEC903CAE540}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFE665CB-F12F-43A8-8FC3-4604EF6ECC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -84,5 +62,9 @@ Global
 		{E6A56154-8058-466F-8E75-03F950D5D33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6A56154-8058-466F-8E75-03F950D5D33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6A56154-8058-466F-8E75-03F950D5D33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFA1212-FAA4-4A3E-B9E2-B33FA14BE79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFA1212-FAA4-4A3E-B9E2-B33FA14BE79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFA1212-FAA4-4A3E-B9E2-B33FA14BE79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFA1212-FAA4-4A3E-B9E2-B33FA14BE79A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

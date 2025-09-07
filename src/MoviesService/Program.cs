@@ -1,8 +1,8 @@
 using System.Text;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using MoviesService;
 using MoviesService.Data;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -28,6 +28,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
+
+builder.Services.AddFluentValidationAutoValidation(fv => { fv.DisableDataAnnotationsValidation = true; });
 
 // Register MoviesDbContext with SQL Server
 builder.Services.AddDbContext<MoviesDbContext>(options =>

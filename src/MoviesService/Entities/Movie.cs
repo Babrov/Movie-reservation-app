@@ -4,31 +4,48 @@ namespace MoviesService.Entities;
 
 public class Movie : BaseEntity, IAggregateRoot
 {
-    public Movie(string title, int runtimeMinutes, int releaseYear)
-    {
-        Title = string.IsNullOrWhiteSpace(title)
-            ? throw new ArgumentException("Title cannot be null or whitespace.", nameof(title))
-            : title;
-        RuntimeMinutes = runtimeMinutes > 0
-            ? runtimeMinutes
-            : throw new ArgumentOutOfRangeException(nameof(runtimeMinutes),
-                "RuntimeMinutes must be greater than zero.");
-        ReleaseYear = releaseYear > 1800
-            ? releaseYear
-            : throw new ArgumentOutOfRangeException(nameof(releaseYear),
-                "ReleaseYear must be greater than 1800.");
+    private string _title = string.Empty;
 
+    private int releaseYear;
+
+    private int runtimeMinutes;
+
+    public Movie()
+    {
         Slug = Title.ToLowerInvariant().Replace(' ', '-').Concat($"-{ReleaseYear}").ToString()!;
     }
 
-    private Movie()
+    public string Title
     {
+        get => _title;
+        set =>
+            _title = string.IsNullOrWhiteSpace(value)
+                ? throw new ArgumentException("Title cannot be null or whitespace.", nameof(Title))
+                : value;
     }
 
-    public string Title { get; init; }
-    public int RuntimeMinutes { get; init; }
+    public int RuntimeMinutes
+    {
+        get => runtimeMinutes;
+        set =>
+            runtimeMinutes = value > 0
+                ? value
+                : throw new ArgumentOutOfRangeException(nameof(RuntimeMinutes),
+                    "RuntimeMinutes must be greater than zero.");
+    }
+
     public string Slug { get; } = string.Empty;
-    public int ReleaseYear { get; set; }
+
+    public int ReleaseYear
+    {
+        get => releaseYear;
+        set =>
+            releaseYear = value > 1800
+                ? value
+                : throw new ArgumentOutOfRangeException(nameof(ReleaseYear),
+                    "ReleaseYear must be greater than 1800.");
+    }
+
     public string Description { get; set; } = string.Empty;
     public DateTimeOffset? PublishedAt { get; private set; }
     public string? ImageUrl { get; set; }

@@ -8,7 +8,7 @@ using MoviesService.Data;
 
 #nullable disable
 
-namespace MoviesService.Migrations
+namespace MoviesService.Data.Migrations
 {
     [DbContext(typeof(MoviesDbContext))]
     partial class MoviesDbContextModelSnapshot : ModelSnapshot
@@ -128,7 +128,24 @@ namespace MoviesService.Migrations
 
                     b.HasKey("MovieId", "GenreId");
 
+                    b.HasIndex("GenreId");
+
                     b.ToTable("MovieGenres");
+                });
+
+            modelBuilder.Entity("MoviesService.Entities.MovieGenre", b =>
+                {
+                    b.HasOne("MoviesService.Entities.Genre", null)
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MoviesService.Entities.Movie", null)
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
